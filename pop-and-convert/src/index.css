@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+  background: #f8fafc;
+}
+
 .box-shadow {
   box-shadow: 0px 4px 4px 0px rgba(0, 18, 64, 0.04);
+}
+
+.box-shadow-2 {
+  box-shadow: 0px 4px 12px 0px rgba(29, 13, 13, 0.04);
+}
+
+.banner a {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
 }
