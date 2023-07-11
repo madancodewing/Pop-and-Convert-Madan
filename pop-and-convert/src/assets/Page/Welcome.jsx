@@ -1,9 +1,7 @@
-import Button from "../Component/Button"
-import Navbar from "../Component/Navbar"
-import banner from "../img/banner.jpg"
-import Card from "../Component/Card"
 import ArrowIcon from "../Component/ArrowIcon"
-
+import Button from "../Component/Button"
+import Card from "../Component/Card"
+import banner from "../img/banner.jpg"
 
 const cardData =
     [
@@ -25,9 +23,10 @@ const cardData =
     ]
 
 const Welcome = () => {
+
     return (
         <>
-            <Navbar />
+
             <div className="container xl mx-auto mb-8">
                 <div className="banner-wrapper flex justify-between gap-20 box-shadow-2 p-14 bg-white items-center rounded">
 
@@ -51,7 +50,7 @@ const Welcome = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div >
             <div className="container flex gap-10">
                 {
                     cardData.map(({ title, content, link: Link }, index) => {

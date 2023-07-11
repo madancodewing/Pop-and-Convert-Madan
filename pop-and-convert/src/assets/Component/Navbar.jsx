@@ -1,6 +1,10 @@
 
 import logo from "../img/Logo.png"
-const Navbar = () => {
+const Navbar = ({ onScreenChange, currentScreen }) => {
+
+    const handleScreenChange = (screen) => () => {
+        onScreenChange(screen)
+    }
     return (
 
         <div className="navbar box-shadow mb-10 bg-white">
@@ -15,7 +19,7 @@ const Navbar = () => {
                     </div>
                     <ul className="icons flex gap-5">
                         <li>
-                            <a className="icon text-fontColor hover:text-primaryColor duration-300 " href="">
+                            <a className="icon text-fontColor hover:text-primaryColor duration-300 " onClick={handleScreenChange('welcome')}>
                                 <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="1.00037" y="0.5" width="43" height="43" rx="21.5" fill="none" />
                                     <path d="M22.5003 30.3332C27.1027 30.3332 30.8337 26.6022 30.8337 21.9998C30.8337 17.3975 27.1027 13.6665 22.5003 13.6665C17.898 13.6665 14.167 17.3975 14.167 21.9998C14.167 26.6022 17.898 30.3332 22.5003 30.3332Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -26,7 +30,7 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li>
-                            <a className="icon text-fontColor hover:text-primaryColor duration-300 " href="">
+                            <a className="icon text-fontColor hover:text-primaryColor duration-300 " onClick={handleScreenChange('notification')}>
                                 <svg width="45" height="44" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M31.5857 17.4197C31.3676 16.5985 30.725 15.9518 29.9091 15.7323C28.4303 15.3335 22.5004 15.3335 22.5004 15.3335C22.5004 15.3335 16.5706 15.3335 15.0917 15.7323C14.2758 15.9518 13.6333 16.5985 13.4152 17.4197C13.0189 18.9081 13.0189 22.0136 13.0189 22.0136C13.0189 22.0136 13.0189 25.1191 13.4152 26.6076C13.6333 27.4287 14.2758 28.0485 15.0917 28.268C16.5706 28.6668 22.5004 28.6668 22.5004 28.6668C22.5004 28.6668 28.4303 28.6668 29.9091 28.268C30.725 28.0485 31.3676 27.4287 31.5857 26.6076C31.9819 25.1191 31.9819 22.0136 31.9819 22.0136C31.9819 22.0136 31.9819 18.9081 31.5857 17.4197ZM20.561 24.8332V19.1941L25.5172 22.0137L20.561 24.8332Z" fill="currentColor" />
                                     <rect x="1.00037" y="0.5" width="43" height="43" rx="21.5" stroke="currentColor" />
@@ -66,7 +70,7 @@ const Navbar = () => {
                 </nav>
 
             </div>
-        </div>
+        </div >
 
     )
 }
