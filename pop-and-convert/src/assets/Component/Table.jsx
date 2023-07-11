@@ -32,7 +32,7 @@ const defaultNotifications = [
     }
 ]
 
-const Table = ({ searchQuery }) => {
+const Table = ({ searchAction }) => {
 
     const [notifications, setNotifications] = useState(defaultNotifications)
 
@@ -54,10 +54,10 @@ const Table = ({ searchQuery }) => {
 
     useEffect(() => {
         const filteredNotifications = defaultNotifications.filter((notification) =>
-            notification.title.toLowerCase().includes(searchQuery.toLowerCase())
+            notification.title.toLowerCase().includes(searchAction.toLowerCase())
         );
         setNotifications(filteredNotifications);
-    }, [searchQuery]);
+    }, [searchAction]);
 
     return <table className="table w-full mt-10">
         <thead>
