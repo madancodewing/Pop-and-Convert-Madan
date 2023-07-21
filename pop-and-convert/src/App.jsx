@@ -9,6 +9,7 @@ const screens = {
     notification: Notification,
 }
 
+
 function App() {
     const [currentPage, setCurrentPage] = useState('welcome')
     return (
@@ -21,3 +22,5 @@ function App() {
 }
 
 export default App
+
+
